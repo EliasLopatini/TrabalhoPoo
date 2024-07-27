@@ -1,0 +1,17 @@
+br\unipar\uniagro\enums\ClasseProdutoEnum.class
+br\unipar\uniagro\Uniagro.class
+br\unipar\uniagro\domain\LotesProduto.class
+br\unipar\uniagro\services\MarcaService.class
+br\unipar\uniagro\domain\Produto.class
+br\unipar\uniagro\infraestructure\DataBaseConection.class
+br\unipar\uniagro\domain\Cliente.class
+br\unipar\uniagro\domain\Marca.class
+br\unipar\uniagro\domain\BaseEntity.class
+br\unipar\uniagro\services\ClienteService.class
+br\unipar\uniagro\domain\FormaPagamento.class
+br\unipar\uniagro\services\LoteProdutoService.class
+br\unipar\uniagro\services\ProdutoService.class
+br\unipar\uniagro\services\FormaPagamentoService.class
+br\unipar\uniagro\exceptions\BussinesException.class
+br\unipar\uniagro\enums\StatusProdutoEnum.class
+br\unipar\uniagro\repositories\MarcaRepository.class
