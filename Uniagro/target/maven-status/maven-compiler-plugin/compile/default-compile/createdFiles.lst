@@ -9,6 +9,7 @@ br\unipar\uniagro\domain\Marca.class
 br\unipar\uniagro\domain\BaseEntity.class
 br\unipar\uniagro\services\ClienteService.class
 br\unipar\uniagro\domain\FormaPagamento.class
+br\unipar\uniagro\repositories\ProdutoRepository.class
 br\unipar\uniagro\services\LoteProdutoService.class
 br\unipar\uniagro\services\ProdutoService.class
 br\unipar\uniagro\services\FormaPagamentoService.class

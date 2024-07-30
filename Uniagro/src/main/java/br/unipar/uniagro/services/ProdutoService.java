@@ -7,6 +7,8 @@ package br.unipar.uniagro.services;
 import br.unipar.uniagro.domain.Marca;
 import br.unipar.uniagro.domain.Produto;
 import br.unipar.uniagro.exceptions.BussinesException;
+import br.unipar.uniagro.repositories.ProdutoRepository;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -23,6 +25,7 @@ public class ProdutoService {
         
         produto.setDtInsercao(new Date());
         produto.setDtAtualizacao(new Date());
+        new ProdutoRepository().insert(produto);
         return produto;
     }
     
@@ -30,19 +33,21 @@ public class ProdutoService {
         ValidateId(produto.getId());
         validate(produto);
         produto.setDtAtualizacao(new Date());
+        new ProdutoRepository().update(produto);
         return produto;
     }
     
     public void deleteById(Integer id) throws Exception{
+        new ProdutoRepository().delete(id);
         ValidateId(id);
     }
-    public ArrayList<Produto> findaAll(){
-        return new ArrayList<Produto>();
+    public ArrayList<Produto> findaAll() throws SQLException{
+         return new ProdutoRepository().findAll();
     }
     
     public Produto findById(Integer id) throws Exception{
         ValidateId(id);
-        return new Produto();
+        return new ProdutoRepository().findById(id);
     }
     
     private void validate(Produto produto)throws Exception{
@@ -61,7 +66,7 @@ public class ProdutoService {
         if(produto.getVlrPreco() == null){
             throw new BussinesException("O preço é obrigatorio");
         }
-        if(produto.getVlrPreco() >= 0){
+        if(produto.getVlrPreco() <= 0.0){
             throw new BussinesException("O preço deve ser maior que 0");
         }
         if(produto.getStatus()== null){

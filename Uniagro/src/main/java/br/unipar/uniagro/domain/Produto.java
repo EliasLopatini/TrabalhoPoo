@@ -57,5 +57,10 @@ public class Produto extends BaseEntity{
     public void setMarca(Marca marca) {
         this.marca = marca;
     }
+
+    @Override
+    public String toString() {
+        return "Produto{" + "nome=" + nome + ", vlrPreco=" + vlrPreco + ", classe=" + classe + ", status=" + status + ", marca=" + marca + '}';
+    }
    
 }
